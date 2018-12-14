@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="1039.0" style="-fx-background-color: #444;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos.controller.AlbumController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="SRC_ATOP" fill="#252525" height="61.0" layoutX="-13.0" layoutY="-14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1079.0" />
+      <Label layoutX="14.0" layoutY="21.0" text="Collections" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="19.0" layoutY="58.0" mnemonicParsing="false" onAction="#createAlbum" prefHeight="27.0" prefWidth="151.0" text="Create New Album">
+         <VBox.margin>
+            <Insets bottom="10.0" left="8.0" right="8.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <ListView fx:id="albumList" layoutX="15.0" layoutY="95.0" prefHeight="417.0" prefWidth="157.0" stylesheets="@application.css">
+         <VBox.margin>
+            <Insets left="12.0" right="12.0" />
+         </VBox.margin>
+      </ListView>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="524.0" mnemonicParsing="false" onAction="#deleteAlbum" prefHeight="30.0" prefWidth="151.0" snapToPixel="false" style="-fx-background-color: #e84545; -fx-text-fill: #fff;" text="Delete Album">
+         <VBox.margin>
+            <Insets left="10.0" top="12.0" />
+         </VBox.margin>
+      </Button>
+      <Label layoutX="185.0" layoutY="21.0" text="Photos" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchText" layoutX="497.0" layoutY="11.0" prefHeight="25.0" prefWidth="244.0" promptText="Search Photos By Tags" />
+      <Button layoutX="958.0" layoutY="11.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="68.0" text="Logout" />
+      <ScrollPane fx:id="imgGallery" layoutX="179.0" layoutY="95.0" prefHeight="417.0" prefWidth="316.0" style="-fx-background-color: #252525;" />
+      <Button layoutX="379.0" layoutY="527.0" mnemonicParsing="false" onAction="#deletePhoto" style="-fx-background-color: #e84545; -fx-text-fill: #fff;" text="Delete Photo" />
+      <Button layoutX="293.0" layoutY="527.0" mnemonicParsing="false" onAction="#addPhoto" text="Add Photo" />
+      <Button layoutX="749.0" layoutY="11.0" mnemonicParsing="false" onAction="#search" prefHeight="9.0" prefWidth="34.0" stylesheets="@application.css" text="🔎" />
+      <Button layoutX="520.0" layoutY="527.0" mnemonicParsing="false" onAction="#editCaption" text="Edit Caption" />
+      <Button layoutX="864.0" layoutY="527.0" mnemonicParsing="false" onAction="#moveTo" text="Move To.." />
+      <Button layoutX="611.0" layoutY="527.0" mnemonicParsing="false" onAction="#editTag" text="Edit Tags" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#252525" height="336.0" layoutX="500.0" layoutY="59.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="525.0" />
+      <Button layoutX="943.0" layoutY="527.0" mnemonicParsing="false" onAction="#copyTo" text="Copy To.." />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#252525" height="108.0" layoutX="500.0" layoutY="405.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="525.0" />
+      <Label layoutX="520.0" layoutY="415.0" text="Caption" textFill="#c2c2c2" />
+      <Label fx:id="labelCaption" layoutX="520.0" layoutY="429.0" text="Text" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" layoutX="520.0" layoutY="479.0" text="Text" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="465.0" text="Date" textFill="#c2c2c2" />
+      <Label layoutX="770.0" layoutY="415.0" text="Tags" textFill="#c2c2c2" />
+      <Label fx:id="labelTags" layoutX="807.0" layoutY="421.0" text="Text" textFill="WHITE" />
+      <BorderPane layoutX="500.0" layoutY="57.0" prefHeight="318.0" prefWidth="525.0">
+         <center>
+            <ImageView fx:id="bigView" fitHeight="268.0" fitWidth="459.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Button layoutX="981.0" layoutY="357.0" mnemonicParsing="false" onAction="#navigateRight" prefHeight="27.0" prefWidth="34.0" text="&gt;" />
+      <Button layoutX="510.0" layoutY="357.0" mnemonicParsing="false" onAction="#navigateLeft" prefHeight="27.0" prefWidth="34.0" text="&lt;" />
+      <Button layoutX="789.0" layoutY="11.0" mnemonicParsing="false" onAction="#clearSearch" prefHeight="27.0" prefWidth="49.0" stylesheets="@application.css" text="Clear" />
+      <Label layoutX="185.0" layoutY="54.0" text="Photos in Album: " textFill="#c5c5c5" />
+      <Label fx:id="labelNumPhotos" layoutX="285.0" layoutY="54.0" text="5" textFill="WHITE" />
+      <Label fx:id="labelDateRange" layoutX="255.0" layoutY="73.0" text="Date" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+      <Label layoutX="185.0" layoutY="71.0" text="Date Range:" textFill="#c5c5c5" />
+   </children>
+</AnchorPane>

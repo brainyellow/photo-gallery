@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos.controller.SelectAlbumController">
+   <children>
+      <Label layoutX="35.0" layoutY="17.0" text="Select Destination Album">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="albumList" layoutX="35.0" layoutY="42.0" prefHeight="161.0" prefWidth="200.0" />
+      <Button layoutX="35.0" layoutY="212.0" mnemonicParsing="false" onAction="#confirm" prefHeight="25.0" prefWidth="70.0" text="Confirm" />
+      <Button layoutX="165.0" layoutY="212.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Cancel" />
+   </children>
+</AnchorPane>

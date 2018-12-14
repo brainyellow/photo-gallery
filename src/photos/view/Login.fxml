@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos.controller.LoginController" stylesheets="@loginStyles.css">
+   <children>
+      <Label fx:id="photosText" layoutX="77.0" layoutY="188.0" text="Photos." textFill="#434343">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label layoutX="647.0" layoutY="201.0" text="Enter Username" />
+      <TextField fx:id="usernameField" layoutX="647.0" layoutY="226.0" prefHeight="32.0" prefWidth="192.0" />
+      <Button fx:id="loginButton" defaultButton="true" layoutX="647.0" layoutY="287.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="192.0" style="-fx-background-color: #2c7ae0; -fx-text-fill: #fff;" text="Login" />
+      <Button fx:id="createUserButton" layoutX="647.0" layoutY="330.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#createUser" prefHeight="32.0" prefWidth="192.0" text="Create User" />
+   </children>
+</AnchorPane>
